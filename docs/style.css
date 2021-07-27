@@ -1,0 +1,73 @@
+body {
+	background: #222;
+	overflow-x: hidden;
+}
+.card {
+	margin: 2rem;
+}
+#keyboard {
+	width: 65vw;
+	list-style: none;
+	background: #111;
+	padding-left: 1.5vw;
+	padding-top: 1.3vw;
+	padding-bottom: 0.8vw;
+	margin: 2vw auto;
+	height: 24vw;
+}
+#keyboard li {
+	float: left;
+	margin: 0 0.3vw 0.3vw 0;
+	width: 3vw;
+	height: 3vw;
+	text-align: center;
+	background: linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(34,34,34,1) 50%, rgba(40,40,40,1) 100%);
+	border: 0.1vw solid #000;
+	border-radius: 0.3vw;
+	color: #ccc;
+	line-height: 1.5vw;
+	font-size: 0.8vw;
+	font-weight: 500;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+button:focus, button:active {outline:0 !important;}
+.spacing {
+	content: " ";
+	padding-left: 0.8vw;
+	display: inline;
+}
+.capslock, .tab, .left-shift {
+	clear: left;
+}
+#keyboard .tab {
+	width: 4vw;
+}
+
+#keyboard .delete {
+	width: 6vw;
+}
+
+#keyboard .capslock {
+	width: 5vw;
+}
+#keyboard .return {
+	width: 7.4vw;
+}
+#keyboard .left-shift {
+	width: 7vw;
+}
+#keyboard .right-shift {
+	width: 8.8vw;
+}
+.lastitem {
+	margin-right: 0;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+#keyboard .space {
+	width: 19vw;
+}
