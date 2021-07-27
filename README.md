@@ -1,6 +1,9 @@
 # wooting-js
 Lightweight JavaScript (TypeScript) library using WebHID.
 
+## Demo
+[Click here](https://mexican-man.github.io/wooting-js/)
+
 ## How to install
 Download the compiled `.js` files in `/bin`, and download the source and build it for yourself; no requirements other than `npm` and `typescript`.
 
