@@ -1,5 +1,5 @@
-const vendorId = 0x03eb // Wooting vendor ID
-const filters = [{ vendorId: vendorId }];
+const vendorIdList = [0x03eb, 0x31e3] // Wooting vendor ID
+const filters = vendorIdList.map(e => ({vendorId: e}));
 const usagePage = 0xff54 // This is the usage page value reported bt the HID device we want, rather than the controller, or regular keyboard, etc...
 
 // Copied from https://github.com/WootingKb/wooting-analog-sdk/
@@ -185,7 +185,7 @@ async function wootingConnectPrev() : Promise<Array<WootingKeyboard>> {
         // Find matching device
         let newDevices : Array<WootingKeyboard> = []
         devices.forEach(device => {
-            if (device.vendorId !== vendorId || device.collections[0].usagePage !== usagePage) {
+            if (!vendorIdList.includes(device.vendorId) || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
                 return;
             }
             switch (device) {
@@ -211,7 +211,7 @@ async function wootingConnectNew() : Promise<Array<WootingKeyboard>> {
 
         let newDevices : Array<WootingKeyboard> = []
         devices.forEach(device => {
-            if (device.vendorId !== vendorId || device.collections[0].usagePage !== usagePage) {
+            if (!vendorIdList.includes(device.vendorId) || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
                 return;
             }
             switch (device) {

@@ -3,6 +3,7 @@
       "target": "es6",
       "module": "es6",
       "outDir": "bin",
-      "sourceMap": true
+      "sourceMap": true,
+      "lib": ["es6", "dom", "es2017"],
     }
   }

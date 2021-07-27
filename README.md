@@ -1,8 +1,11 @@
 # wooting-js
-Lightweight JavaScript (TypeScript) library using WebHID.
+Lightweight JavaScript (TypeScript) library using WebHID. Just works for reading analog values, not for any fancy RGB.
+
+## Demo
+[Click here](https://mexican-man.github.io/wooting-js/)
 
 ## How to install
-Download the compiled `.js` files in `/bin`, and download the source and build it for yourself; no requirements other than `npm` and `typescript`.
+Download the compiled `.js` files in `/bin`, or download the source and build it for yourself; no requirements other than `npm` and `typescript`.
 
 ## How to use
 First you have to make sure the client's [browser supports WebHID](https://caniuse.com/webhid). You can check this like so:
@@ -60,7 +63,7 @@ setInterval(() => {
 
 > NOTE: It's important to have the `|| 0` because `0` will return `undefined`, as we don't know if a key is unpressed, or just doesn't exists on that keyboard.
 
-Using a listener gives a smaller footprint, while reading the buffer is a lot more efficient for reading lots of keys. Pick whichever works best for you.
+Using a listener gives a smaller footprint, while reading the buffer is a lot more efficient for reading lots of keys. Pick whichever works best for you. In both cases, the value returned is from 0-255. Use `keys.<insert-key-name>` to get the "name" for each key (check `wooting.ts` or `wooting.js` to see the list).
 
 ## Performance
 If you're looking for increase performance, you can comment out *any* keys you're not using in the enum at the top of `/src/wooting.ts` for a significant performance improvement. I've gone ahead and commented out all keys not available on the Wooting One.
