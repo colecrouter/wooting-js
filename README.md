@@ -1,5 +1,5 @@
 # wooting-js
-Lightweight JavaScript (TypeScript) library using WebHID.
+Lightweight JavaScript (TypeScript) library using WebHID. Just works for reading analog values, not for any fancy RGB.
 
 ## Demo
 [Click here](https://mexican-man.github.io/wooting-js/)
