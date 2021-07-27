@@ -5,7 +5,7 @@ Lightweight JavaScript (TypeScript) library using WebHID. Just works for reading
 [Click here](https://mexican-man.github.io/wooting-js/)
 
 ## How to install
-Download the compiled `.js` files in `/bin`, and download the source and build it for yourself; no requirements other than `npm` and `typescript`.
+Download the compiled `.js` files in `/bin`, or download the source and build it for yourself; no requirements other than `npm` and `typescript`.
 
 ## How to use
 First you have to make sure the client's [browser supports WebHID](https://caniuse.com/webhid). You can check this like so:
