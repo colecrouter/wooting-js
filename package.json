@@ -1,0 +1,12 @@
+{
+  "name": "wooting-js",
+  "version": "0.0.1",
+  "description": "JS library for reading analog data from a Wooting keyboard using WebHID.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cole Crouter",
+  "license": "ISC",
+  "dependencies": {}
+}
