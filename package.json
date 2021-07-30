@@ -8,5 +8,7 @@
   },
   "author": "Cole Crouter",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@types/w3c-web-hid": "^1.0.1"
+  }
 }
