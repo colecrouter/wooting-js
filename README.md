@@ -4,8 +4,10 @@ Lightweight JavaScript (TypeScript) library using WebHID. Just works for reading
 ## Demo
 [Click here](https://mexican-man.github.io/wooting-js/)
 
-## How to install
-Download the compiled `.js` files in `/bin`, or download the source and build it for yourself; no requirements other than `npm` and `typescript`.
+## How to build
+Download the compiled `.js` files in `/bin`, or download the source and build it for yourself; no requirements* other than `npm` and `typescript`. Run `tsc` to build into `/bin`.
+
+*`@types/w3c-web-hid` is required for this to work, but seems to be builtin on some node environment but not others. If you get errors about `hid` not found, run `npm install` and that should fix your issue.
 
 ## How to use
 First you have to make sure the client's [browser supports WebHID](https://caniuse.com/webhid). You can check this like so:
