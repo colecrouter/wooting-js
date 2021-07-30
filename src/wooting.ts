@@ -1,7 +1,6 @@
 const vendorIdList = [0x03eb, 0x31e3] // Wooting vendor ID
 const filters = vendorIdList.map(e => ({vendorId: e}));
 const usagePage = 0xff54 // This is the usage page value reported bt the HID device we want, rather than the controller, or regular keyboard, etc...
-
 // Copied from https://github.com/WootingKb/wooting-analog-sdk/
 // IMPORTANT: you can comment out keys you won't be using in your script; this can save lots of performance
 enum keys {
@@ -231,7 +230,6 @@ async function wootingConnectNew() : Promise<Array<WootingKeyboard>> {
 class WootingKeyboard {
     device? : HIDDevice
     deviceName? : string
-    keyMap? : Map<bigint, string>
     listeners? : Array<[keys, Function]>
     buffer? : Map<keys, bigint>
 
