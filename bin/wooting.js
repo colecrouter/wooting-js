@@ -206,9 +206,10 @@ function wootingConnectNew() {
             let devices = yield navigator.hid.requestDevice({ filters });
             let newDevices = [];
             devices.forEach(device => {
-                if (!vendorIdList.includes(device.vendorId) || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
+                if (!vendorIdList.includes(device.vendorId) || device.collections.length === 0 || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
                     return;
                 }
+                console.log(device);
                 switch (device) {
                     case undefined:
                         break;

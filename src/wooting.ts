@@ -210,7 +210,7 @@ async function wootingConnectNew() : Promise<Array<WootingKeyboard>> {
 
         let newDevices : Array<WootingKeyboard> = []
         devices.forEach(device => {
-            if (!vendorIdList.includes(device.vendorId) || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
+            if (!vendorIdList.includes(device.vendorId) || device.collections.length === 0 || device.collections[0].usagePage !== usagePage || !device.productName.includes('Wooting')) {
                 return;
             }
             switch (device) {
