@@ -269,6 +269,7 @@ class WootingKeyboard {
                     break;
                 }
             }
+
             // Should be 48, incrementing by 3 means 16 loops per packet
             // Iterate through each key once more, check for changed values
             // Only real reason for this block is because the keyboard doesn't send a '0' packet when key is unpressed,
