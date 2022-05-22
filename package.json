@@ -1,6 +1,6 @@
 {
   "name": "wooting-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JS library for reading analog data from a Wooting keyboard using WebHID.",
   "main": "src/index.ts",
   "scripts": {
