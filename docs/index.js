@@ -174,8 +174,12 @@ class WootingKeyboard {
                 }
             }
             for (const key in AnalogKeyCode) {
+                if (isNaN(Number(key))) {
+                    continue;
+                }
                 if (newBuffer[key] != this.buffer[key]) {
                     window.dispatchEvent(new CustomEvent(newBuffer[key] ? 'akeydown' : 'akeyup', { detail: { key: key, value: newBuffer[key] || 0 } }));
+                    console.log(`Key ${key} changed from ${this.buffer[key]} to ${newBuffer[key]}`);
                 }
             }
             this.buffer = newBuffer;

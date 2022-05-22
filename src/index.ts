@@ -275,9 +275,12 @@ class WootingKeyboard {
             // Only real reason for this block is because the keyboard doesn't send a '0' packet when key is unpressed,
             // otherwise the dispatchEvent() could be put in the do-while above
             for (const key in AnalogKeyCode) {
+                if (isNaN(Number(key))) {
+                    continue;
+                }
                 // If value is different, dispatch event
                 if (newBuffer[key] != this.buffer[key]) {
-                    window.dispatchEvent(new CustomEvent(newBuffer[key] ? 'akeydown' : 'akeyup', { detail: { key: key, value: newBuffer[key] || 0 } }));
+                    this.device.dispatchEvent(new CustomEvent(newBuffer[key] ? 'akeydown' : 'akeyup', { detail: { key: key, value: newBuffer[key] || 0 } }));
                 }
             }
 
