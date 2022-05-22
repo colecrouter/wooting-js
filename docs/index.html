@@ -1,150 +1,155 @@
 <!doctype html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="row">
-			<div class="card text-white bg-dark col-2">
-				<div class="card-header">Keyboard Info</div>
-				<div class="card-body">
-					Device Name: <span id="deviceName"></span><br />
-					Product ID:  <span id="productId"></span><br />
-				</div>
-				<div class="card-footer"><button id="connect" class="btn btn-lg btn-block btn-info">Connect!</button></div>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="row">
+		<div class="card text-white bg-dark col-2">
+			<div class="card-header">Keyboard Info</div>
+			<div class="card-body">
+				Device Name: <span id="deviceName"></span><br />
+				Product ID: <span id="productId"></span><br />
 			</div>
-			<div class="card col-9 card text-white bg-dark">
-				<ul id="keyboard">
-					<li class="symbol" id="41" style="margin-right: 2.3vw;">Esc</li>
-					<li class="symbol" id="58">F1</li>
-					<li class="symbol" id="59">F2</li>
-					<li class="symbol" id="60">F3</li>
-					<li class="symbol" id="61" style="margin-right: 2.3vw;">F4</li>
-					<li class="symbol" id="62">F5</li>
-					<li class="symbol" id="63">F6</li>
-					<li class="symbol" id="64">F7</li>
-					<li class="symbol" id="65" style="margin-right: 2.3vw;">F8</li>
-					<li class="symbol" id="66">F9</li>
-					<li class="symbol" id="67">F10</li>
-					<li class="symbol" id="68">F11</li>
-					<li class="symbol" id="69" style="margin-right: 3.2vw;">F12</li>
-					<li class="symbol" id="70">Prt Sc</li>
-					<li class="symbol" id="72">Pause</li>
-					<li class="symbol lastitem" id="71">ScrLk</li>
-					<li style="width: 100%; height: 1vw !important; visibility: hidden"> </li>
-					<li class="symbol" id="53">`<div class="spacing"></div>~</li>
-					<li class="symbol" id="30">1<div class="spacing"></div>!</li>
-					<li class="symbol" id="31">2<div class="spacing"></div>@</li>
-					<li class="symbol" id="32">3<div class="spacing"></div>#</li>
-					<li class="symbol" id="33">4<div class="spacing"></div>$</li>
-					<li class="symbol" id="34">5<div class="spacing"></div>%</li>
-					<li class="symbol" id="35">6<div class="spacing"></div>^</li>
-					<li class="symbol" id="36">7<div class="spacing"></div>&amp;</li>
-					<li class="symbol" id="37">8<div class="spacing"></div>*</li>
-					<li class="symbol" id="38">9<div class="spacing"></div>(</li>
-					<li class="symbol" id="39">0<div class="spacing"></div>)</li>
-					<li class="symbol" id="45">-<div class="spacing"></div>_</li>
-					<li class="symbol" id="46">=<div class="spacing"></div>+</li>
-					<li class="delete" id="42" style="margin-right: 3vw;">Backspace</li>
-					<li class="symbol" id="73">Ins</li>
-					<li class="symbol" id="74">Home</li>
-					<li class="symbol lastitem" id="75">Pg Up</li>
-					<li class="tab" id="43">Tab</li>
-					<li class="letter" id="20">Q</li>
-					<li class="letter" id="26">W</li>
-					<li class="letter" id="8">E</li>
-					<li class="letter" id="21">R</li>
-					<li class="letter" id="23">T</li>
-					<li class="letter" id="28">Y</li>
-					<li class="letter" id="24">U</li>
-					<li class="letter" id="12">I</li>
-					<li class="letter" id="18">O</li>
-					<li class="letter" id="19">P</li>
-					<li class="symbol" id="47">[<div class="spacing"></div>{</li>
-					<li class="symbol" id="48">]<div class="spacing"></div>}</li>
-					<li class="symbol" id="49" style="width: 5vw; margin-right: 3vw;">\<div class="spacing"></div>|</li>
-					<li class="symbol" id="76">Del</li>
-					<li class="symbol" id="77">End</li>
-					<li class="symbol lastitem" id="78">Pg Dn</li>
-					<li class="capslock" id="57">Caps Lock</li>
-					<li class="letter" id="4">A</li>
-					<li class="letter" id="22">S</li>
-					<li class="letter" id="7">D</li>
-					<li class="letter" id="9">F</li>
-					<li class="letter" id="10">G</li>
-					<li class="letter" id="11">H</li>
-					<li class="letter" id="13">J</li>
-					<li class="letter" id="14">K</li>
-					<li class="letter" id="15">L</li>
-					<li class="symbol" id="51">;<div class="spacing"></div>:</li>
-					<li class="symbol" id="52">'<div class="spacing"></div>&quot;</li>
-					<li class="return lastitem" id="40">Return</li>
-					<li class="left-shift" id="225">Shift</li>
-					<li class="letter" id="29">Z</li>
-					<li class="letter" id="27">X</li>
-					<li class="letter" id="6">C</li>
-					<li class="letter" id="25">V</li>
-					<li class="letter" id="5">B</li>
-					<li class="letter" id="17">N</li>
-					<li class="letter" id="16">M</li>
-					<li class="symbol" id="54">,<div class="spacing"></div>&lt;</li>
-					<li class="symbol" id="55">.<div class="spacing"></div>&gt;</li>
-					<li class="symbol" id="56">/<div class="spacing"></div>?</li>
-					<li class="right-shift" id="229">Shift</li>
-					<li class="symbol lastitem" style="margin-left: 5.9vw; margin-right: 4vw;" id="82">Up</li>
-					<li class="symbol" style="width: 4vw;" id="224">Ctrl</li>
-					<li class="symbol" style="width: 4vw;" id="227">Win</li>
-					<li class="symbol" style="width: 4vw;" id="226">Alt</li>
-					<li class="space" id="44">—</li>
-					<li class="symbol" style="width: 4vw;" id="230">Alt</li>
-					<li class="symbol" style="width: 4vw;" id="231">Win</li>
-					<li class="symbol" style="width: 4vw;" id="85">Fn</li>
-					<li class="symbol" style="width: 4vw;" id="228">Ctrl</li>
-					<li class="symbol lastitem" style="margin-left: 2.7vw;" id="80">Left</li>
-					<li class="symbol lastitem" id="81">Down</li>
-					<li class="symbol lastitem" id="79">Right</li>		
-				</ul>
-			</div>
+			<div class="card-footer"><button id="connect" class="btn btn-lg btn-block btn-info">Connect!</button></div>
 		</div>
-		<script src="wooting.js"></script>
-        <script>
+		<div class="card col-9 card text-white bg-dark">
+			<ul id="keyboard">
+				<li class="symbol" id="41" style="margin-right: 2.3vw;">Esc</li>
+				<li class="symbol" id="58">F1</li>
+				<li class="symbol" id="59">F2</li>
+				<li class="symbol" id="60">F3</li>
+				<li class="symbol" id="61" style="margin-right: 2.3vw;">F4</li>
+				<li class="symbol" id="62">F5</li>
+				<li class="symbol" id="63">F6</li>
+				<li class="symbol" id="64">F7</li>
+				<li class="symbol" id="65" style="margin-right: 2.3vw;">F8</li>
+				<li class="symbol" id="66">F9</li>
+				<li class="symbol" id="67">F10</li>
+				<li class="symbol" id="68">F11</li>
+				<li class="symbol" id="69" style="margin-right: 3.2vw;">F12</li>
+				<li class="symbol" id="70">Prt Sc</li>
+				<li class="symbol" id="72">Pause</li>
+				<li class="symbol lastitem" id="71">ScrLk</li>
+				<li style="width: 100%; height: 1vw !important; visibility: hidden"> </li>
+				<li class="symbol" id="53">`<div class="spacing"></div>~</li>
+				<li class="symbol" id="30">1<div class="spacing"></div>!</li>
+				<li class="symbol" id="31">2<div class="spacing"></div>@</li>
+				<li class="symbol" id="32">3<div class="spacing"></div>#</li>
+				<li class="symbol" id="33">4<div class="spacing"></div>$</li>
+				<li class="symbol" id="34">5<div class="spacing"></div>%</li>
+				<li class="symbol" id="35">6<div class="spacing"></div>^</li>
+				<li class="symbol" id="36">7<div class="spacing"></div>&amp;</li>
+				<li class="symbol" id="37">8<div class="spacing"></div>*</li>
+				<li class="symbol" id="38">9<div class="spacing"></div>(</li>
+				<li class="symbol" id="39">0<div class="spacing"></div>)</li>
+				<li class="symbol" id="45">-<div class="spacing"></div>_</li>
+				<li class="symbol" id="46">=<div class="spacing"></div>+</li>
+				<li class="delete" id="42" style="margin-right: 3vw;">Backspace</li>
+				<li class="symbol" id="73">Ins</li>
+				<li class="symbol" id="74">Home</li>
+				<li class="symbol lastitem" id="75">Pg Up</li>
+				<li class="tab" id="43">Tab</li>
+				<li class="letter" id="20">Q</li>
+				<li class="letter" id="26">W</li>
+				<li class="letter" id="8">E</li>
+				<li class="letter" id="21">R</li>
+				<li class="letter" id="23">T</li>
+				<li class="letter" id="28">Y</li>
+				<li class="letter" id="24">U</li>
+				<li class="letter" id="12">I</li>
+				<li class="letter" id="18">O</li>
+				<li class="letter" id="19">P</li>
+				<li class="symbol" id="47">[<div class="spacing"></div>{</li>
+				<li class="symbol" id="48">]<div class="spacing"></div>}</li>
+				<li class="symbol" id="49" style="width: 5vw; margin-right: 3vw;">\<div class="spacing"></div>|</li>
+				<li class="symbol" id="76">Del</li>
+				<li class="symbol" id="77">End</li>
+				<li class="symbol lastitem" id="78">Pg Dn</li>
+				<li class="capslock" id="57">Caps Lock</li>
+				<li class="letter" id="4">A</li>
+				<li class="letter" id="22">S</li>
+				<li class="letter" id="7">D</li>
+				<li class="letter" id="9">F</li>
+				<li class="letter" id="10">G</li>
+				<li class="letter" id="11">H</li>
+				<li class="letter" id="13">J</li>
+				<li class="letter" id="14">K</li>
+				<li class="letter" id="15">L</li>
+				<li class="symbol" id="51">;<div class="spacing"></div>:</li>
+				<li class="symbol" id="52">'<div class="spacing"></div>&quot;</li>
+				<li class="return lastitem" id="40">Return</li>
+				<li class="left-shift" id="225">Shift</li>
+				<li class="letter" id="29">Z</li>
+				<li class="letter" id="27">X</li>
+				<li class="letter" id="6">C</li>
+				<li class="letter" id="25">V</li>
+				<li class="letter" id="5">B</li>
+				<li class="letter" id="17">N</li>
+				<li class="letter" id="16">M</li>
+				<li class="symbol" id="54">,<div class="spacing"></div>&lt;</li>
+				<li class="symbol" id="55">.<div class="spacing"></div>&gt;</li>
+				<li class="symbol" id="56">/<div class="spacing"></div>?</li>
+				<li class="right-shift" id="229">Shift</li>
+				<li class="symbol lastitem" style="margin-left: 5.9vw; margin-right: 4vw;" id="82">Up</li>
+				<li class="symbol" style="width: 4vw;" id="224">Ctrl</li>
+				<li class="symbol" style="width: 4vw;" id="227">Win</li>
+				<li class="symbol" style="width: 4vw;" id="226">Alt</li>
+				<li class="space" id="44">—</li>
+				<li class="symbol" style="width: 4vw;" id="230">Alt</li>
+				<li class="symbol" style="width: 4vw;" id="231">Win</li>
+				<li class="symbol" style="width: 4vw;" id="85">Fn</li>
+				<li class="symbol" style="width: 4vw;" id="228">Ctrl</li>
+				<li class="symbol lastitem" style="margin-left: 2.7vw;" id="80">Left</li>
+				<li class="symbol lastitem" id="81">Down</li>
+				<li class="symbol lastitem" id="79">Right</li>
+			</ul>
+		</div>
+	</div>
+	<script type="module">
+		import { WootingConnectNew } from './index.js';
+
 		if ("hid" in navigator) {
 			console.log("The WebHID API is supported by this browser.");
 		} else {
-			alert("The WebHID API is not supported by this browser.")
+			alert("The WebHID API is not supported by this browser.");
 			console.assert(false, "The WebHID API is not supported by this browser.");
 		}
 
-            var k, kb;
-            document.getElementById("connect").addEventListener("click", () => {
-                k = wootingConnectNew();
-                k.then((res) => {
-                    kb = res[0]
-                    setInterval(() => {
-						for (let key in keys) {
-							try {
-								document.getElementById(key).style.color = colourize(kb.buffer[key] || 0);
-							} catch (err) {}
-						}
-                    }, 50);
-					document.getElementById("deviceName").innerText = kb.deviceName;
-					document.getElementById("productId").innerText = kb.device.productId;
-                })
-            });
+		var k, kb;
+		document.getElementById("connect").addEventListener("click", () => {
+			k = wootingConnectNew();
+			k.then((res) => {
+				kb = res[ 0 ];
+				setInterval(() => {
+					for (let key in keys) {
+						try {
+							document.getElementById(key).style.color = colourize(kb.buffer[ key ]);
+						} catch (err) { }
+					}
+				}, 50);
+				document.getElementById("deviceName").innerText = kb.deviceName;
+				document.getElementById("productId").innerText = kb.device.productId;
+			});
+		});
 
-			function byte2Hex(n) {
-				var nybHexString = "0123456789ABCDEF";
-				return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
-			}
+		function byte2Hex (n) {
+			var nybHexString = "0123456789ABCDEF";
+			return String(nybHexString.substr((n >> 4) & 0x0F, 1)) + nybHexString.substr(n & 0x0F, 1);
+		}
 
-			function colourize(i) {
-				frequency = 1
-				red   = 255-i //Math.sin(frequency*i + 0) * 127 + 128;
-				green = 255-i //Math.sin(frequency*i + 2) * 127 + 128;
-				blue  = 255 //Math.sin(frequency*i + 4) * 127 + 128;
-				return '#' + byte2Hex(red) + byte2Hex(green) + byte2Hex(blue);
-			}
-		</script>
-	</body>
+		function colourize (i) {
+			frequency = 1;
+			red = 255 - i; //Math.sin(frequency*i + 0) * 127 + 128;
+			green = 255 - i; //Math.sin(frequency*i + 2) * 127 + 128;
+			blue = 255; //Math.sin(frequency*i + 4) * 127 + 128;
+			return '#' + byte2Hex(red) + byte2Hex(green) + byte2Hex(blue);
+		}
+	</script>
+</body>
+
 </html>
