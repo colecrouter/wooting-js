@@ -111,7 +111,7 @@
 		</div>
 	</div>
 	<script type="module">
-		import { ConnectNew } from './index.js';
+		import { ConnectNew, AnalogKeyCode } from './index.js';
 
 		if ("hid" in navigator) {
 			console.log("The WebHID API is supported by this browser.");
@@ -126,7 +126,7 @@
 			k.then((res) => {
 				kb = res[ 0 ];
 				setInterval(() => {
-					for (let key in keys) {
+					for (let key in AnalogKeyCode) {
 						try {
 							document.getElementById(key).style.color = colourize(kb.buffer[ key ]);
 						} catch (err) { }
